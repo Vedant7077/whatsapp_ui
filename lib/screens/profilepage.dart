@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:whatsapp_ui/providers/country_provider.dart';
+import 'package:whatsapp_ui/screens/homescreen.dart';
 import 'package:whatsapp_ui/widgets/custom_text.dart';
 import 'package:whatsapp_ui/widgets/whatsappButton.dart';
 
@@ -78,7 +79,9 @@ class _ProfilepageState extends State<Profilepage> {
         ),
       ),
       floatingActionButton: InkWell(
-        onTap: (){},
+        onTap: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Homescreen()));
+        },
         child: whatsappButton("Next"),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
